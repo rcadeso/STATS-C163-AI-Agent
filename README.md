@@ -64,13 +64,13 @@ Protects runtime initialization by wrapping actions inside a hard token-claiming
 To keep latency profile spikes well within AWS platform limitations, the agent incorporates two distinct optimization guardrails:
 
 ```python
-# System Constraints (Enforced in FINAL_CODE.ipynb)
+# System Constraints (Enforced in AGENT_FINAL_CODE.ipynb)
 MODEL_NAME = "deepseek-r1:8b"
-max_tokens = 350    # Prevents long-form generation bloat
-timeout = 20       # Prevents locking threads on high-density reasoning steps
+max_tokens = 800    # Prevents long-form generation bloat
+timeout = 25       # Prevents locking threads on high-density reasoning steps
 ```
 
-* **Reasoning Token Cap:** Outputs are strictly capped at `350` max tokens. DeepSeek is allocated enough overhead to completely open and close its chain-of-thought `<think>` tags without risking truncation errors.
+* **Reasoning Token Cap:** Outputs are strictly capped at `800` max tokens. DeepSeek is allocated enough overhead to completely open and close its chain-of-thought `<think>` tags without risking truncation errors.
 * **Thinking Path Limits:** System prompts explicitly mandate a short, concise internal reasoning trail:
   * For Moves: `"Keep your thinking process extremely short and concise (under 3 sentences total) inside your <think> tags."`
   * For Messages: `"- Keep the <think> process under 2 sentences max."`
@@ -86,7 +86,7 @@ ollama run deepseek-r1:8b
 ```
 
 ### Setup & Run
-1. Open `FINAL_CODE.ipynb` and navigate to the **`AGENT CLAIMING CODE`** cell.
+1. Open `AGENT_FINAL_CODE.ipynb` and navigate to the **`AGENT CLAIMING CODE`** cell.
 2. Define your unique agent identity name and execute the initialization routine:
    ```python
    my_agent = ConnectedAgent(agent_name="Your_Unique_Agent_Name")
