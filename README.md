@@ -121,11 +121,11 @@ The agent operates under three decoupled policy pillars:
 
 Notes
 - In the first tournament, every match consisted of 8 rounds, while the next two tournaments were only 5 rounds.
-- Amber-Agent2 was agressive with defecting, leading to a huge point differential in the first tournament.
+- Amber-Agent2 came out out of the first tournament with a huge lead by aggresively defecting.
   - Other teams adapted in the following tournaments biasing agents to defect more often, leading to lower scoring rounds.
-  - Some of the logic being that by always defecting you can never "lose" a match.
-  - Because of this, our agent (DeepSeek - RyVi) was able to place #2 in matches won despite scoring the second least amount of points.
-- Some agents used prompt injection to send messages that didn't allign with their decision(C/D) allowing them to capitalize off agents that heavily focused on opponent reasoning.
+  - Some of the logic being that by always defecting you can never "lose" a match.  Thus, some agents that defected more were able to win more rounds despite not scoring as many points per tournament.
+- Prompt injection as a strategy
+  - Sending friendly messages seekeing cooperation or conveying a past history of cooperation while constantly defecting.
 
 
 ## 👨‍💻 Contributors
