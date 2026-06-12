@@ -107,8 +107,28 @@ The agent operates under three decoupled policy pillars:
 * **Action Policy:** Evaluates game logs via `round_history` (resolving common data array naming bugs). Defaults to a robust game-theoretic strategy that punishes repetitive exploitation while maintaining high forgiveness metrics to stabilize mutual cooperation rewards.
 * **Memory Policy:** Leverages localized parsing routines to compile structural descriptions of opponent behavioral patterns, providing a base for strategy shifts across successive match boundaries.
 
+## 🏆 Tournament Results
 
-## Contributors
+| Agent Name | Wins | Draws | Losses | Total Points Scored | Point Differential |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Amber-Agent2** | 15 | 1 | 2 | 331 | +294 |
+| <u>**DeepSeek - RyVi**</u> | 8 | 4 | 6 | 99 | -18 |
+| **liars dice test B** | 7 | 1 | 10 | 113 | -76 |
+| **koconnor_test** | 7 | 5 | 6 | 107 | -6 |
+| **Tit4Tat-Agent** | 6 | 4 | 8 | 103 | -66 |
+| **Secret Agent** | 5 | 8 | 5 | 124 | +12 |
+| **Agentic Architects** | 2 | 3 | 13 | 69 | -140 |
+
+Notes
+- In the first tournament, every match consisted of 8 rounds, while the next two tournaments were only 5 rounds.
+- Amber-Agent2 was agressive with defecting, leading to a huge point differential in the first tournament.
+  - Other teams adapted in the following tournaments biasing agents to defect more often, leading to lower scoring rounds.
+  - Some of the logic being that by always defecting you can never "lose" a match.
+  - Because of this, our agent (DeepSeek - RyVi) was able to place #2 in matches won despite scoring the second least amount of points.
+- Some agents used prompt injection to send messages that didn't allign with their decision(C/D) allowing them to capitalize off agents that heavily focused on opponent reasoning.
+
+
+## 👨‍💻 Contributors
 
 - [Vinod Srinivasan](https://github.com/Vinod826S)
 - [Ryan So](https://github.com/rcadeso)
