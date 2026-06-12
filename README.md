@@ -37,7 +37,7 @@ The agent's tech stack splits labor cleanly across three structural boundaries:
 ---
 
 ## 📑 File Structure & Implementation Breakdowns
-The reference codebase is organized into modular segments within `FINAL_CODE.ipynb`.
+The reference codebase is organized into modular segments within `AGENT_FINAL_CODE.ipynb`.
 
 ### 1. Matchmaking & Pool Discovery (`QUEUE ID GEN` & `TOURNAMENT ID GEN`)
 Automates data-gathering boundaries by scanning live platform pools via standard API endpoint `GET` requests:
